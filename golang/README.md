@@ -40,8 +40,15 @@ golang/
 ├── long-parameters/            # Functions with too many parameters
 │   ├── bad/                       # Functions with 20+ parameters
 │   └── good/                       # Grouped into parameter structs
-├── refactoring-methods/        # Refactoring techniques in Go
-│   └── example.go                 # Go-specific refactoring examples
+├── refactoring-methods/        # 72 refactoring techniques in Go
+│   ├── 01-extract-method.go      # Extract Method refactoring
+│   ├── 02-variable-refactoring.go # Variable refactoring techniques
+│   ├── 03-moving-features.go     # Moving methods and fields
+│   ├── 04-data-organization.go   # Data restructuring
+│   ├── 05-conditional-expressions.go # Simplifying conditionals
+│   ├── 06-method-calls.go        # Method signature improvements
+│   ├── 07-generalization-problems.go # Interface and composition issues
+│   └── 08-major-refactorings.go  # Large-scale refactorings
 └── renunciation-of-inheritance/ # Inheritance misused
     ├── bad/                       # Forced embedding hierarchy
     └── good/                       # Composition and interfaces
@@ -95,17 +102,17 @@ Each smell directory contains:
 
 ## 🔧 Refactoring Methods (`refactoring-methods/`)
 
-Examples of **refactoring techniques** adapted for Go from Martin Fowler's book:
+Comprehensive examples of **72 refactoring techniques** adapted for Go from Martin Fowler's *Refactoring: Improving the Design of Existing Code*:
 
 ### Categories:
-- **Function Extraction** - Breaking down large functions
-- **Variable Refactoring** - Improving variable usage
-- **Moving Features** - Relocating code to appropriate places
-- **Data Organization** - Restructuring data and structs
-- **Conditional Expressions** - Simplifying complex conditionals
-- **Function Calls** - Improving function signatures and calls
-- **Generalization Problems** - Fixing interface issues
-- **Major Refactorings** - Large-scale architectural changes
+- **01-extract-method.go** - Extract Method, Inline Method
+- **02-variable-refactoring.go** - Inline Temp, Replace Temp with Query, Introduce Explaining Variable, Split Temporary Variable, Remove Assignments to Parameters, Replace Method with Method Object
+- **03-moving-features.go** - Substitute Algorithm, Move Method, Move Field, Extract Class, Inline Class, Hide Delegate, Remove Middle Man, Introduce Foreign Method, Introduce Local Extension
+- **04-data-organization.go** - Self-Encapsulate Field, Replace Data Value with Object, Change Value to Reference, Change Reference to Value, Replace Array with Object, Duplicate Observed Data, Change Unidirectional to Bidirectional Association, Change Bidirectional to Unidirectional Association, Replace Magic Number with Symbolic Constant
+- **05-conditional-expressions.go** - Decompose Conditional, Consolidate Conditional Expression, Consolidate Duplicate Conditional Fragments, Remove Control Flag, Replace Nested Conditional with Guard Clauses, Replace Conditional with Polymorphism, Introduce Null Object, Introduce Assertion
+- **06-method-calls.go** - Rename Method, Add Parameter, Remove Parameter, Separate Query from Modifier, Parameterize Method, Replace Parameter with Explicit Methods, Preserve Whole Object, Replace Parameter with Method, Introduce Parameter Object, Remove Setting Method, Hide Method, Replace Constructor with Factory Method
+- **07-generalization-problems.go** - Pull Up Field, Pull Up Method, Pull Up Constructor Body, Push Down Method, Push Down Field, Extract Subclass, Extract Superclass, Extract Interface, Collapse Hierarchy
+- **08-major-refactorings.go** - Tease Apart Inheritance, Convert Procedural Design to Objects, Separate Domain from Presentation, Extract Hierarchy
 
 ## 🚀 Getting Started
 
@@ -129,9 +136,16 @@ cd ../good
 go run order_processor.go
 go run tax_calculator.go
 
-# Example: Run data clumps examples
-cd ../../data-clumps/good
-go run customer_service.go
+# Example: Run refactoring method examples
+cd ../../refactoring-methods
+go run 01-extract-method.go
+go run 02-variable-refactoring.go
+go run 03-moving-features.go
+go run 04-data-organization.go
+go run 05-conditional-expressions.go
+go run 06-method-calls.go
+go run 07-generalization-problems.go
+go run 08-major-refactorings.go
 ```
 
 ### Learning Path
