@@ -1,0 +1,25 @@
+{
+  "name": "code-smells-nodejs",
+  "version": "1.0.0",
+  "description": "Code smells and refactoring examples in Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "code-smells",
+    "refactoring",
+    "nodejs",
+    "examples"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "nodemailer": "^6.9.7"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
